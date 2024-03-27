@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+:root {
+    --primary: #f5f5f5;
+    --dark: #1d0716;
+    --vivid: #50fff9;
+    --border-radius: 25px;
+}
+
+body {
+    background-color: var(--dark);
+    font-family: "Sora", sans-serif;
+    padding: 1rem 15rem;
+}
+
+h1,h2,h3 {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+h3 {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: underline var(--vivid);
+}
+
+h1 span {
+    color: var(--vivid);
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 82vh; */
+    border: 1px solid #50fff91f;
+    box-shadow: 0px 0px 15px 1px var(--vivid);
+    padding: 5rem 2rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.row a:not(:last-of-type) {
+    margin-right: 35px;
+}
+
+a {
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--primary);
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    min-width: 200px;
+    text-transform: capitalize;
+}
+
+a:hover {
+    box-shadow: 0px 0px 10px 0px var(--vivid);
+    border: 1px solid var(--vivid);
+    color: var(--vivid);
+    background-color: var(--dark);
+}
+
+.bordered {
+    border: 1px solid var(--primary);
+}
+
+.rounded {
+    /* border-radius: var(--border-radius); */
+}
+
+.transparent {
+    border: 1px solid transparent;
+    text-decoration: underline;
+}
+
+.highlight {
+    box-shadow: 0px 0px 225px 0px var(--vivid);
+}
+
+.offset {
+    box-shadow: 225px 225px 250px -10px var(--vivid);
+}
+
+.minus {
+    box-shadow: 0px 0px 225px -100px var(--vivid);
+}
+
+.hide-right {
+    box-shadow: 1500px 0px 225px 0px var(--vivid);
+}
+
+.offset-to-top {
+    box-shadow: 110px -625px 525px 0px #fed81890;
+}
+
+/* media query for smaller than 1130px */
+@media (max-width: 1130px) {
+    body {
+        padding: 0 0;
+    }
+}
+/* media query for smaller than 740px */
+@media (max-width: 740px) {
+    body {
+        padding: 0 0;
+    }
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
