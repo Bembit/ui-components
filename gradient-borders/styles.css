@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&display=swap');
+
+:root {
+    --dark: #000a12;
+    --blue: #5e6ae4;
+    --pink: #a155d0;
+    --blue2: #636eeb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 100px 500px;
+    background-color: #000a12;
+    color: #f3f1f5;
+    font-family: "Lexend Mega", sans-serif;
+    line-height: 1.6;
+    letter-spacing: -2px;
+}
+
+h1 {
+    letter-spacing: -8px;
+}
+
+.content {
+    /* width: 50%; */
+    text-align: center;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #5e6ae4 , #a155d0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+/* wrapper : before and after method */
+
+.wrapper {
+    border-radius: 20px;
+    box-shadow:  2px 2px 60px -12px #636eeb;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/isolation */
+    /* This property is especially helpful when used in conjunction with mix-blend-mode and z-index. */
+    /* A new stacking context must be created. */
+    isolation: isolate;
+    padding: 50px;
+    position: relative;
+}
+
+.wrapper::before {
+    background: linear-gradient(45deg, #5e6ae4 , #a155d0 );
+    inset: -5px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.wrapper::after {
+    background: #000a12;
+    z-index: -1;
+    border-radius: 15px;
+    content: "";
+    inset: 0;
+    position: absolute;
+}
+
