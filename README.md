@@ -20,3 +20,9 @@
 - `negative spread-radius` looks interesting.
 
 <img src="./zimages/box-shadow-fun.gif" width="60%" />
+
+#### <a href="/gradient-borders/">**gradient borders**</a>
+- Told you, I'm going neon.
+- `CSS wrapper before and after`
+
+<img src="./zimages/gradientborder.png" width="60%" />
