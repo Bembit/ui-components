@@ -2,9 +2,8 @@
 
 ### Doing things
 
-#### <a href="/quick-layout/">**blog layout flex **</a>
+#### <a href="/quick-layout/">blog layout flex</a>
 - Felt like I have to make a responsive flex layout this morning.
-- `CSS pseudo-class :focus-within`
 
 <img src="./zimages/layout.gif" width="60%" />
 
