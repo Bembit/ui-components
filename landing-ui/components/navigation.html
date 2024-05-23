@@ -1,0 +1,74 @@
+
+
+<div id="navigation-container__left" class="navigation-container__left">
+
+    <div class="navigation-metadata-container">
+
+        <img class="navigation-logo" hx-get="./components/landing/home.html" hx-target="#main" hx-trigger="click" src="./assets/me.jpg" alt="test logo">
+
+        <div class="navigation-title">
+            <h1>BRAND<span>.NAME</span></h1>
+        </div>
+
+        <div class="navigation-status-container">
+                
+
+        </div>
+
+    </div>
+
+    <ul id="" hx-get="./components/menus_dropdowns/navigation-main-menu.html" hx-trigger="load" class="navigation-links">
+        
+    </ul>
+
+</div>
+
+<div class="navigation-container__right">
+    <i onclick="showThemeSwitchContainer()" onmouseleave="hideThemeSwitchContainer()" class="fa-solid fa-cog theme-switcher">
+        <div id="themeSwitchContainer" class="theme-switch-container" style="display: none;">
+            <h3>Themes</h3>
+            <br>
+            <div onclick="themeSwitch('dark')" class="theme-select-container"><i class="fa-solid fa-moon"></i><span>Bloodlines</span></div>
+            <div onclick="themeSwitch('light')" class="theme-select-container"><i class="fa-solid fa-sun"></i><span>Skies</span></div>
+            <div onclick="themeSwitch('purple')" class="theme-select-container"><i class="fa-solid fa-palette"></i><span>default: Slick purple</span></div>
+            <div onclick="themeSwitch('black')" class="theme-select-container"><i class="fa-solid fa-palette"></i><span>Dark theme</span></div>
+            <div onclick="themeSwitch('white')" class="theme-select-container"><i class="fa-solid fa-palette"></i><span>Light theme</span></div>
+            <br>
+            <h3>Borders</h3>
+            <br>
+            <div onclick="borderSwitch('rounded')" class="theme-select-container"><i class="fa-solid fa-palette"></i><span>default: Rounded Borders</span></div>
+            <div onclick="borderSwitch('square')" class="theme-select-container"><i class="fa-solid fa-palette"></i><span>Square Borders</span></div>
+            <br>
+            <h3>Gradients</h3>
+            <br>
+            <div onclick="gradientSwitch('radial')" class="theme-select-container"><i class="fa-solid fa-palette"></i><span>default: Radial Gradient</span></div>
+            <div onclick="gradientSwitch('linear-right')" class="theme-select-container"><i class="fa-solid fa-palette"></i><span>Gradient to Right</span></div>
+            <div onclick="gradientSwitch('linear-left')" class="theme-select-container"><i class="fa-solid fa-palette"></i><span>Gradient to Left</span></div>
+            <div onclick="gradientSwitch('linear-top')" class="theme-select-container"><i class="fa-solid fa-palette"></i><span>Gradient to Top</span></div>
+            <div onclick="gradientSwitch('linear-bottom')" class="theme-select-container"><i class="fa-solid fa-palette"></i><span>Gradient to Bottom</span></div>
+            <br>
+
+            <h3>Cookies?</h3>
+                 
+        </div>
+    </i>
+
+    <button onclick="toggleVisibility()" id="navigation-sub-toggle" class="navigation-sub-toggle">
+        Close sub-nav
+        <i class="toggle-sub-nav-up fa-solid fa-chevron-up"></i>
+        <i class="toggle-sub-nav-down fa-solid fa-chevron-down" style="display: none;"></i>
+    </button>
+    
+    <label class="toggle-switch">
+        <input type="checkbox" id="navigation-sticky-toggle" class="navigation-sticky-toggle" onchange="toggleStickyNav()">
+        <span class="slider"></span>
+    </label>
+      
+
+    <div onclick="showErrorToast()" class="connected-status-indicator">
+        <i class="fa-solid fa-check"></i>
+    </div>
+    <i onclick="openMobileDropdown()" class="fa-solid fa-bars burger-icon"><ul onmouseleave="closeMobileDropdownOnLeave()" id="mobile_dropdown_container" class="mobile_dropdown_container" style="display: none;"></ul></i>
+    
+</div>
+    

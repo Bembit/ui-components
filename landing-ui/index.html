@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#232A35" />
+    <title>Test</title>
+    <script src="https://kit.fontawesome.com/df3e6f116a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./js/htmx.min.js"></script>
+    <script src="./js/ui.js" defer></script>
+</head>
+
+<body>
+
+    <header id="navigation" class="navigation" hx-get="./components/navigation.html" hx-trigger="load">
+        <!-- hx-get="./components/navigation.html" -->
+    </header>
+
+    <nav id="navigation-sub" class="navigation-sub" hx-get="./components/navigation-sub.html" hx-trigger="load">
+        <!-- hx-get="./components/navigation-sub.html" -->
+    </nav>
+
+    <div id="toastInfoBar" class="toast-info-bar" style="display: none;">
+        <i class="fa-solid fa-xmark" onclick="closeToastInfoBar()"></i>
+        <span>Something went wrong:</span>
+        <br>
+        <p></p>
+
+        <a hx-get="/components/landing/faq.html" hx-target="#main" href="">See help section -></a>
+    </div>
+
+    <ul class="features-list-preview">
+        <li class="features-list-feature" style="background-image: url(./assets/vendor_logos/netflix.svg);"></li>
+        <li class="features-list-feature" style="background-image: url(./assets/vendor_logos/coke.svg);"></li>
+        <li class="features-list-feature" style="background-image: url(./assets/vendor_logos/heineken.svg);"></li>
+        <li class="features-list-feature" style="background-image: url(./assets/vendor_logos/tinder.svg);"></li>
+        <li class="features-list-feature" style="background-image: url(./assets/vendor_logos/spotify.svg);"></li>
+    </ul>
+
+    <main id="main" hx-get="./components/landing/home.html" hx-trigger="load">
+    </main>
+
+    <footer>
+        
+    </footer>
+
+</body>
+</html>
